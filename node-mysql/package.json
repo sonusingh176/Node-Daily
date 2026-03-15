@@ -1,6 +1,19 @@
 {
+
+  "name": "mysql-node-crud",
+  "private": true,
+  "version": "0.0.0",
+ 
+
+  "scripts": {
+   "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+
   "dependencies": {
+    "ejs": "^5.0.1",
     "express": "^5.2.1",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "nodemon": "^3.1.14"
   }
 }
