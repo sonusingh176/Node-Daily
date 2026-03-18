@@ -1,8 +1,8 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('database', 'username', 'password', {
+const sequelize = new Sequelize('school', 'root', '', {
     host: 'localhost',
-    dialect:mysql , //one of 'mysql' | 'postgres' | 'sqlite' | 'mariadb' | oracle.
+    dialect:'mysql' , //one of 'mysql' | 'postgres' | 'sqlite' | 'mariadb' | oracle.
   });
 
   try {
@@ -11,3 +11,6 @@ const sequelize = new Sequelize('database', 'username', 'password', {
   } catch (error) {
     console.error('Unable to connect to the database:', error);
   }
+
+
+module.exports=sequelize
