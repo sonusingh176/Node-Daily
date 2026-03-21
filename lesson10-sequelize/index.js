@@ -1,13 +1,20 @@
 const express = require('express');
 const bodyParser =require('body-parser');
-const db = require('./config/database');
+
+const Student = require('./models/Student');
+const Contact = require('./models/Contact')
 const app = express();
 
 app.use(bodyParser.json());
 
-app.get('/', function(req,res){
-    res.send('hello world')
-});
+// app.get('/', function(req,res){
+//     res.send('hello world')
+// });
+
+//  Student.sync({ force: true })
+ 
+// Contact.sync({ force: true })
+//Student.drop();
 
 
 app.listen(5000,()=>{
