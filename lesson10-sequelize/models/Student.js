@@ -3,7 +3,6 @@ const sequelize= require('../config/database');
 
 const Student = sequelize.define(
    'Student',
-
     {
       // id:{
       //   type: DataTypes.INTEGER,

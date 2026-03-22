@@ -1,20 +1,25 @@
 const express = require('express');
 const bodyParser =require('body-parser');
 
-const Student = require('./models/Student');
-const Contact = require('./models/Contact')
 const app = express();
 
+
+
+const db = require('./models');
+
+db.sequelize.sync().then(()=>console.log("Tables create")).catch((err)=>console.log(err));
+
+
 app.use(bodyParser.json());
+
+
 
 // app.get('/', function(req,res){
 //     res.send('hello world')
 // });
 
-//  Student.sync({ force: true })
- 
-// Contact.sync({ force: true })
-//Student.drop();
+
+
 
 
 app.listen(5000,()=>{

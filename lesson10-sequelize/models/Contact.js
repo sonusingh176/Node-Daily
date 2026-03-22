@@ -1,31 +1,25 @@
-const { Sequelize, DataTypes, Model } = require('sequelize');
+const { DataTypes, Model } = require('sequelize');
 const sequelize= require('../config/database');
+
 
 class Contact extends Model {}
 
 Contact.init(
   {
     // Model attributes are defined here
-    student_id:{
-        type:DataTypes.INTEGER
-    },
-    city:{
-        type:DataTypes.STRING
-    },
-    address: {
+    firstName: {
       type: DataTypes.STRING,
-    //  allowNull: false,
+      allowNull: false,
     },
-    mobile: {
+    lastName: {
       type: DataTypes.STRING,
       // allowNull defaults to true
     },
   },
   {
+    // Other model options go here
     sequelize, // We need to pass the connection instance
     modelName: 'Contact', // We need to choose the model name
-    tableName: 'contacts', //optional 
-    timestamps: true 
   },
 );
 
