@@ -1,0 +1,37 @@
+<% if(message){ %>
+    <p style="color: green;"><%= message %></p>
+<% } %>
+
+<h2>Students</h2>
+
+<a href="/students/create">Add Student</a>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Roll No</th>
+        <th>DOB</th>
+        <th>Action</th>
+    </tr>
+
+    <% students.forEach(function(e){ %>
+
+        <tr>
+            <td> <%= e.id %> </td>
+            <td> <%= e.name %> </td>
+            <td> <%= e.email %> </td>
+            <td> <%= e.mobile %>  </td>
+            <td> <%= e.roll_no %>  </td>
+            <td> <%= e.dob %>  </td>
+            <td>
+                <a href="/students/edit/<%= e.id %>">EDIT</a>
+                <a href="/students/delete/<%= e.id %>">Delete</a>
+            </td>
+        </tr>
+
+    <% })%>
+
+</table>

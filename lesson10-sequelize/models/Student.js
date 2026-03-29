@@ -14,6 +14,12 @@ const Student = sequelize.define(
         allowNull: false,
 
       },
+      email:{
+        type: DataTypes.STRING,
+      },
+      mobile:{
+        type: DataTypes.STRING,
+      },
       roll_no:{
         type: DataTypes.STRING,
         allowNull: false,
@@ -21,12 +27,7 @@ const Student = sequelize.define(
       dob:{
         type: DataTypes.DATEONLY,
       },
-      email:{
-        type: DataTypes.STRING,
-      },
-      mobile:{
-        type: DataTypes.STRING,
-      }
+     
 
     },
     

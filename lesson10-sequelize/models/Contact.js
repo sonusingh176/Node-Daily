@@ -6,15 +6,10 @@ class Contact extends Model {}
 
 Contact.init(
   {
-    // Model attributes are defined here
-    firstName: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    lastName: {
-      type: DataTypes.STRING,
-      // allowNull defaults to true
-    },
+    student_id: DataTypes.INTEGER,
+    city: DataTypes.STRING,
+    address: DataTypes.STRING,
+    mobile: DataTypes.STRING,
   },
   {
     // Other model options go here

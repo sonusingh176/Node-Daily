@@ -1,24 +1,24 @@
 const express = require('express');
 const bodyParser =require('body-parser');
+const db = require('./models');
+const studentRoutes =require('./routes/studentRoutes')
 
 const app = express();
 
-
-
-const db = require('./models');
 
 db.sequelize.sync().then(()=>console.log("Tables create")).catch((err)=>console.log(err));
 
 
 app.use(bodyParser.json());
 
+// Set EJS as the view engine
+app.set('view engine', 'ejs');
+
+//Form data read karne ke liye.  Isse form ka data req.body me milta hai.
+app.use(express.urlencoded({extended:true}));
 
 
-// app.get('/', function(req,res){
-//     res.send('hello world')
-// });
-
-
+app.use('/',studentRoutes)
 
 
 
